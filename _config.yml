@@ -1,11 +1,11 @@
 # _config.yml
 title: "NOOOB Tech Blog"
-description: "网络安全 · 技术开发 · 警校生的日常"
+description: "网络安全 · 技术开发 · 日常笔记"
 author: "DyNooob"
 baseurl: ""
 url: "https://dynooob.github.io"
 
-# 主题（GitHub Pages 内置）
+# 主题
 theme: jekyll-theme-hacker
 
 # 语言
@@ -14,9 +14,6 @@ timezone: Asia/Shanghai
 
 # 分页
 paginate: 10
-
-# 社交链接
-github: [metadata]
 
 # 文章设置
 permalink: /posts/:title/
