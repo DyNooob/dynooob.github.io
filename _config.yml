@@ -5,8 +5,8 @@ author: "DyNooob"
 baseurl: ""
 url: "https://dynooob.github.io"
 
-# 主题
-theme: jekyll-theme-hacker
+# 主题 (自定义布局覆盖，远程主题仅作为基础)
+remote_theme: pages-themes/hacker@v0.2.0
 
 # 语言
 lang: zh-CN
@@ -26,6 +26,7 @@ kramdown:
 
 # 插件
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap

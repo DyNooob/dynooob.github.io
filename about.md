@@ -1,19 +1,16 @@
 ---
-layout: page
+layout: default
 title: 关于
-permalink: /about/
 ---
 
-# 关于我
+## 关于本站
 
-**DyNooob**
+一个技术博客，记录学习与实践中的思考。
 
-网络安全学习者，全栈开发爱好者。
+**方向：**
+- 网络安全
+- 技术开发
+- 日常笔记
 
-### 技术栈
-- Python / Node.js / Linux
-- 网络协议 / 渗透测试
-- Web 前后端 / 自动化
-
-### 联系方式
-- GitHub: [@DyNooob](https://github.com/DyNooob)
+**联系方式：**
+- GitHub: [DyNooob](https://github.com/DyNooob)
