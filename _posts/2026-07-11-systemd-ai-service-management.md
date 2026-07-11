@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "用 systemd 管理你的 AI 服务：自动重启与日志"
-date: 2026-07-11 16:00:00 +0800
+date: 2026-07-11 15:00:00 +0800
 categories: [开发]
 tags: [systemd, Linux, 运维, AI部署, 服务管理]
 ---

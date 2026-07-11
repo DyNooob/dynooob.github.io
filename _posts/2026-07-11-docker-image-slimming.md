@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Docker 镜像瘦身：从 2GB 到 300MB"
-date: 2026-07-11 18:00:00 +0800
+date: 2026-07-11 15:00:00 +0800
 categories: [开发]
 tags: [Docker, 容器, 镜像优化, 部署]
 ---
