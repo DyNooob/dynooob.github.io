@@ -1,70 +1,92 @@
 /* ============================================
-   NOOOB Tech Blog - Minimal Clean Styles
+   NOOOB Tech Blog - Refined Minimalist Design
+   简约，但不简单
    ============================================ */
+
+/* --- Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
 
 /* --- Reset & Base --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+::selection {
+  background: #e8d5c4;
+  color: #1a1a1a;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif;
-  background: #fff;
-  color: #1a1a2e;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #fcfcf9;
+  color: #2c2c2c;
   line-height: 1.8;
   font-size: 16px;
+  -webkit-font-smoothing: antialiased;
 }
 
 .wrapper {
-  max-width: 720px;
+  max-width: 680px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
 /* --- Header --- */
 header {
-  padding: 40px 0 20px;
-  border-bottom: 1px solid #eaeaea;
-  margin-bottom: 32px;
+  padding: 48px 0 24px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #e8e4df;
 }
 
 header .wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 16px;
 }
 
 header h1 {
-  font-size: 1.3rem;
+  font-family: "Noto Serif SC", "Times New Roman", serif;
+  font-size: 1.5rem;
   font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
 }
 
 header h1 a {
-  color: #1a1a2e;
+  color: #1a1a1a;
   text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+header h1 a:hover {
+  opacity: 0.6;
 }
 
 header .subtitle {
-  color: #888;
   font-size: 0.85rem;
-  margin-top: 2px;
+  color: #a09888;
+  margin-top: 4px;
+  font-weight: 400;
 }
 
 header nav {
   display: flex;
-  gap: 20px;
+  gap: 24px;
   align-items: center;
+  padding-bottom: 2px;
 }
 
 header nav a {
-  color: #666;
+  color: #8a8078;
   text-decoration: none;
   font-size: 0.9rem;
-  transition: color 0.15s;
+  font-weight: 400;
+  transition: color 0.2s;
+  letter-spacing: 0.3px;
 }
 
 header nav a:hover {
-  color: #1a1a2e;
+  color: #2c2c2c;
 }
 
 /* --- Post List (Home) --- */
@@ -74,8 +96,12 @@ header nav a:hover {
 }
 
 .post-list li {
-  padding: 14px 0;
-  border-bottom: 1px solid #f0f0f0;
+  padding: 18px 0 16px;
+  border-bottom: 1px solid #efebe7;
+}
+
+.post-list li:first-child {
+  padding-top: 0;
 }
 
 .post-list li:last-child {
@@ -83,68 +109,89 @@ header nav a:hover {
 }
 
 .post-list li .post-title {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #1a1a2e;
+  font-family: "Noto Serif SC", "Times New Roman", serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
   text-decoration: none;
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  line-height: 1.5;
+  transition: color 0.2s;
 }
 
 .post-list li .post-title:hover {
-  color: #e94560;
+  color: #a08060;
 }
 
 .post-list li .post-meta {
   font-size: 0.8rem;
-  color: #999;
+  color: #b0a898;
   display: flex;
-  gap: 10px;
+  gap: 12px;
   align-items: center;
   flex-wrap: wrap;
 }
 
+.post-list li .post-meta time {
+  font-feature-settings: "tnum";
+}
+
 .post-list li .post-meta .tag {
   display: inline-block;
-  padding: 1px 7px;
-  background: #f5f5f5;
-  color: #888;
-  border-radius: 3px;
-  font-size: 0.75rem;
-  line-height: 1.6;
+  padding: 1px 8px;
+  background: #f0ece7;
+  color: #8a8078;
+  border-radius: 2px;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.post-list li .post-meta .tag:hover {
+  background: #e8e0d8;
 }
 
 /* --- Post Page --- */
 .post-header {
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 .post-header h1 {
-  font-size: 1.6rem;
+  font-family: "Noto Serif SC", "Times New Roman", serif;
+  font-size: 1.8rem;
   font-weight: 700;
   line-height: 1.4;
-  margin-bottom: 10px;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  letter-spacing: -0.3px;
 }
 
 .post-header .post-meta {
   font-size: 0.85rem;
-  color: #999;
+  color: #b0a898;
   display: flex;
-  gap: 14px;
+  gap: 16px;
   align-items: center;
   flex-wrap: wrap;
 }
 
 .post-header .post-meta .tag {
   display: inline-block;
-  padding: 1px 7px;
-  background: #f5f5f5;
-  color: #888;
-  border-radius: 3px;
+  padding: 2px 8px;
+  background: #f0ece7;
+  color: #8a8078;
+  border-radius: 2px;
   font-size: 0.75rem;
   text-decoration: none;
+  letter-spacing: 0.2px;
 }
 
+.post-header .post-meta .tag:hover {
+  background: #e8e0d8;
+}
+
+/* --- Post Content --- */
 .post-content {
   font-size: 1rem;
   line-height: 1.9;
@@ -152,51 +199,57 @@ header nav a:hover {
 }
 
 .post-content h2 {
-  font-size: 1.3rem;
+  font-family: "Noto Serif SC", "Times New Roman", serif;
+  font-size: 1.35rem;
   font-weight: 700;
-  margin: 32px 0 14px;
-  color: #1a1a2e;
+  margin: 40px 0 16px;
+  padding-bottom: 6px;
+  color: #1a1a1a;
+  letter-spacing: -0.2px;
 }
 
 .post-content h3 {
+  font-family: "Noto Serif SC", "Times New Roman", serif;
   font-size: 1.1rem;
   font-weight: 600;
-  margin: 24px 0 10px;
-  color: #333;
+  margin: 28px 0 12px;
+  color: #2c2c2c;
 }
 
 .post-content p {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .post-content a {
-  color: #e94560;
+  color: #7a6a58;
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid #d8d0c8;
+  transition: border-color 0.2s, color 0.2s;
 }
 
 .post-content a:hover {
-  border-bottom-color: #e94560;
+  color: #4a3a28;
+  border-bottom-color: #4a3a28;
 }
 
 .post-content code {
-  font-family: "SF Mono", "Fira Code", Consolas, monospace;
-  font-size: 0.88em;
-  background: #f5f5f5;
-  padding: 2px 6px;
+  font-family: "SF Mono", "Fira Code", "Cascadia Code", Consolas, monospace;
+  font-size: 0.85em;
+  background: #f2eee9;
+  padding: 2px 7px;
   border-radius: 3px;
-  color: #d63384;
+  color: #7a5a40;
 }
 
 .post-content pre {
-  background: #1a1a2e;
-  color: #e2e8f0;
-  padding: 18px;
+  background: #1a1a1a;
+  color: #d8d0c8;
+  padding: 20px 24px;
   border-radius: 6px;
   overflow-x: auto;
-  margin: 18px 0;
+  margin: 24px 0;
   font-size: 0.85rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .post-content pre code {
@@ -207,11 +260,11 @@ header nav a:hover {
 }
 
 .post-content blockquote {
-  border-left: 3px solid #e94560;
-  padding: 10px 18px;
-  margin: 18px 0;
-  background: #fafafa;
-  color: #666;
+  border-left: 2px solid #c8b8a8;
+  padding: 4px 0 4px 22px;
+  margin: 24px 0;
+  color: #6a6058;
+  font-style: normal;
 }
 
 .post-content blockquote p:last-child {
@@ -219,37 +272,49 @@ header nav a:hover {
 }
 
 .post-content ul, .post-content ol {
-  margin: 10px 0 14px 22px;
+  margin: 12px 0 20px 24px;
 }
 
 .post-content li {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .post-content table {
   width: 100%;
   border-collapse: collapse;
-  margin: 18px 0;
+  margin: 24px 0;
   font-size: 0.9rem;
 }
 
 .post-content th {
-  background: #f5f5f5;
-  padding: 8px 12px;
+  background: #f2eee9;
+  padding: 10px 14px;
   text-align: left;
   font-weight: 600;
-  border-bottom: 2px solid #eaeaea;
+  border-bottom: 2px solid #e0d8d0;
+  color: #2c2c2c;
 }
 
 .post-content td {
-  padding: 8px 12px;
-  border-bottom: 1px solid #f0f0f0;
+  padding: 10px 14px;
+  border-bottom: 1px solid #efebe7;
+  color: #444;
+}
+
+.post-content tr:last-child td {
+  border-bottom: none;
 }
 
 .post-content hr {
   border: none;
-  border-top: 1px solid #eaeaea;
-  margin: 28px 0;
+  border-top: 1px solid #e8e4df;
+  margin: 40px 0;
+}
+
+.post-content img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin: 24px 0;
 }
 
 /* --- Tags Section (Home) --- */
@@ -257,45 +322,48 @@ header nav a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin: 12px 0;
+  margin: 16px 0 8px;
 }
 
 .tag-list a {
   display: inline-block;
-  padding: 3px 10px;
-  background: #f5f5f5;
-  color: #888;
-  border-radius: 3px;
+  padding: 4px 12px;
+  background: #f0ece7;
+  color: #8a8078;
+  border-radius: 2px;
   text-decoration: none;
   font-size: 0.8rem;
-  transition: background 0.15s;
+  font-weight: 400;
+  transition: background 0.2s;
 }
 
 .tag-list a:hover {
-  background: #eaeaea;
+  background: #e8e0d8;
+  color: #6a6058;
 }
 
 /* --- Section Headers --- */
 .section-title {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #999;
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #b0a898;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: 32px 0 8px;
+  letter-spacing: 1.5px;
+  margin: 40px 0 12px;
 }
 
 /* --- Footer --- */
 footer {
-  border-top: 1px solid #eaeaea;
-  padding: 24px 0;
-  margin-top: 48px;
+  border-top: 1px solid #e8e4df;
+  padding: 28px 0;
+  margin-top: 64px;
 }
 
 footer .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 footer .footer-links {
@@ -304,41 +372,83 @@ footer .footer-links {
   gap: 8px 20px;
   justify-content: center;
   font-size: 0.85rem;
-  color: #aaa;
+  color: #c0b8a8;
 }
 
 footer .footer-links .label {
-  color: #ccc;
+  color: #c8c0b0;
+  font-weight: 400;
 }
 
 footer .footer-links a {
-  color: #888;
+  color: #a09888;
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 footer .footer-links a:hover {
-  color: #e94560;
+  color: #7a6a58;
 }
 
 footer .copyright {
   text-align: center;
   font-size: 0.78rem;
-  color: #ccc;
+  color: #c8c0b0;
+}
+
+/* --- Reading Progress Indicator (Post Page) --- */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #c8b8a8;
+  z-index: 100;
+  transition: width 0.1s;
+}
+
+/* --- Back to Top --- */
+.back-top {
+  display: inline-block;
+  margin-top: 40px;
+  color: #b0a898;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.back-top:hover {
+  color: #7a6a58;
 }
 
 /* --- Responsive --- */
 @media (max-width: 640px) {
   header {
-    padding: 24px 0 16px;
+    padding: 32px 0 20px;
+    margin-bottom: 28px;
   }
+
   header .wrapper {
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
+
   header nav {
-    gap: 16px;
+    gap: 20px;
   }
+
   .post-header h1 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+  }
+
+  .post-content {
+    font-size: 0.95rem;
+  }
+
+  .post-content pre {
+    padding: 14px 16px;
+    font-size: 0.82rem;
   }
 }

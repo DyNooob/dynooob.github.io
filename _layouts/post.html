@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} · {{ site.title }}</title>
   <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
   {% seo %}
   {% feed_meta %}
 </head>
 <body>
+
+<div class="progress-bar" id="progressBar"></div>
 
 <header>
   <div class="wrapper">
@@ -43,6 +47,7 @@
       <div class="post-content">
         {{ content }}
       </div>
+      <a href="#" class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">↑ 回到顶部</a>
     </article>
   </div>
 </main>
@@ -57,6 +62,16 @@
     <div class="copyright">&copy; {{ site.time | date: "%Y" }} {{ site.author }}</div>
   </div>
 </footer>
+
+<script>
+// Reading progress bar
+window.addEventListener('scroll', function() {
+  var scrollTop = window.scrollY;
+  var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  document.getElementById('progressBar').style.width = progress + '%';
+});
+</script>
 
 </body>
 </html>
