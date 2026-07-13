@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} · {{ site.title }}</title>
   <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
   {% seo %}
   {% feed_meta %}
@@ -24,6 +21,7 @@
     </div>
     <nav>
       <a href="{{ "/" | relative_url }}">首页</a>
+      <a href="{{ "/search/" | relative_url }}">搜索</a>
       <a href="{{ "/about/" | relative_url }}">关于</a>
       <a href="https://github.com/DyNooob" target="_blank" rel="noopener">GitHub</a>
     </nav>
