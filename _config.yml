@@ -14,6 +14,7 @@ timezone: Asia/Shanghai
 
 # 分页
 paginate: 10
+paginate_path: "/page:num/"
 
 # 文章设置
 permalink: /posts/:title/
@@ -27,6 +28,7 @@ kramdown:
 # 插件
 plugins:
   - jekyll-remote-theme
+  - jekyll-paginate
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap

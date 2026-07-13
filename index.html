@@ -5,7 +5,7 @@ layout: default
 <div class="section-title">最新文章</div>
 
 <ul class="post-list">
-{% for post in site.posts limit:10 %}
+{% for post in paginator.posts %}
   <li>
     <a href="{{ post.url | relative_url }}" class="post-title">{{ post.title }}</a>
     <div class="post-meta">
@@ -22,8 +22,20 @@ layout: default
 {% endfor %}
 </ul>
 
-{% if site.posts.size > 10 %}
+{% if paginator.total_pages > 1 %}
 <div class="pagination">
-  <span style="color:#bbb;font-size:0.85rem">共 {{ site.posts.size }} 篇文章 · 显示最近 10 篇</span>
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">← 上一页</a>
+  {% else %}
+    <span style="color:#ccc">← 上一页</span>
+  {% endif %}
+
+  <span style="color:#999;font-size:0.85rem">{{ paginator.page }} / {{ paginator.total_pages }}</span>
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">下一页 →</a>
+  {% else %}
+    <span style="color:#ccc">下一页 →</span>
+  {% endif %}
 </div>
 {% endif %}
