@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AMD 128GB 迷你主机 vs RTX 3090：本地 AI 硬件的性价比之争"
-date: 2026-07-20 14:00:00 +0800
+date: 2026-07-20 09:32:00 +0800
 categories: [AI]
 tags: [硬件, 本地部署, AMD, RTX 3090, 性价比]
 ---
