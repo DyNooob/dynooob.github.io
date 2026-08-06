@@ -10,6 +10,9 @@ title: 精选文章
 
 {% for post in site.posts %}
   {% assign is_featured = false %}
+  {% if post.tags contains "精选" %}
+    {% assign is_featured = true %}
+  {% endif %}
   {% if post.tags contains "实战" or post.tags contains "指南" or post.tags contains "框架" %}
     {% assign is_featured = true %}
   {% endif %}
