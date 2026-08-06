@@ -12,13 +12,8 @@ remote_theme: pages-themes/hacker@v0.2.0
 lang: zh-CN
 timezone: Asia/Shanghai
 
-# 分页
-paginate: 10
-paginate_path: "/page:num/"
-
 # 文章设置
 permalink: /posts/:title/
-show_excerpts: true
 
 # 构建
 markdown: kramdown
