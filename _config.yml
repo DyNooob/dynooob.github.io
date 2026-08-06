@@ -5,8 +5,8 @@ author: "DyNooob"
 baseurl: ""
 url: "https://dynooob.github.io"
 
-# 主题 (自定义布局覆盖，远程主题仅作为基础)
-remote_theme: pages-themes/hacker@v0.2.0
+# 主题 (自定义布局，不使用远程主题)
+# remote_theme 已禁用，使用自定义 _layouts/
 
 # 语言
 lang: zh-CN
