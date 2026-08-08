@@ -6,8 +6,6 @@ title: 精选文章
 <div class="section-title">精选文章</div>
 
 <ul class="post-list">
-{% assign featured_posts = site.posts | where_exp: "post", "post.tags contains '精选' or post.tags contains 'AI' or post.tags contains '安全' or post.categories contains '安全'" %}
-
 {% for post in site.posts %}
   {% assign is_featured = false %}
   {% if post.tags contains "精选" %}
